@@ -11,7 +11,7 @@ namespace Open_Lab_05._05
             int index = 0;
             for(int i = 0; i < original.Length; i++)
             {
-                if (originalChar[i] != ' ')
+                if (!Char.IsWhiteSpace(original[i]))
                 {
                     if (index % 2 == 0)
                         ret += originalChar[i].ToString().ToUpper();
