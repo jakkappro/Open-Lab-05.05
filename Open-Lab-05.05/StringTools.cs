@@ -7,15 +7,16 @@ namespace Open_Lab_05._05
         public string AlternatingCaps(string original)
         {
             string ret = "";
+            char[] originalChar = original.ToCharArray();
             int index = 0;
             for(int i = 0; i < original.Length; i++)
             {
-                if (original.ToCharArray()[i].ToString() != " ")
+                if (originalChar[i] != ' ')
                 {
                     if (index % 2 == 0)
-                        ret += original.ToCharArray()[i].ToString().ToUpper();
+                        ret += originalChar[i].ToString().ToUpper();
                     else
-                        ret += original.ToCharArray()[i].ToString().ToLower();
+                        ret += originalChar[i].ToString().ToLower();
 
                     index++;
                 }
